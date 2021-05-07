@@ -83,7 +83,7 @@ func NewHTTPClient(opt *HTTPOptions) (*HTTPClient, error) {
 	client.cookies = opt.Cookies
 	client.method = opt.Method
 	if client.method == "" {
-		client.method = http.MethodGet
+		client.method = http.MethodHead
 	}
 	// Host header needs to be set separately
 	for _, h := range opt.Headers {
